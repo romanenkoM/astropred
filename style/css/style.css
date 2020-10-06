@@ -1,1 +1,101 @@
-/* No CSS */
+.page {
+  width: 100%;
+}
+
+.container {
+  max-width: 65%;
+  margin: 0 auto;
+}
+
+.header__nav__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__body__block {
+  max-width: 50%;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.block2 {
+  width: 100%;
+  background: url("../../img/block-2-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.block2__block {
+  width: 100%;
+}
+
+.block2__block:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.block2 .square {
+  display: block;
+  background-color: #DEC7B5;
+  width: 600px;
+  height: 325px;
+  margin: 0 auto;
+}
+
+.why {
+  background: url("../../img/moon-bg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 20% 0;
+}
+
+.why__block {
+  max-width: 50%;
+  margin-left: 50%;
+}
+
+.why__block__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.schedule {
+  background: url("../../img/block-4-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-bottom: 500px;
+}
+
+.schedule__bigblock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.schedule__underline {
+  height: 1px;
+  width: 20%;
+  background: #AB4146;
+}

@@ -1,0 +1,86 @@
+
+
+
+
+.page
+    width: 100%
+
+
+.container
+    max-width: 65%
+    margin: 0 auto
+
+//Настройка первого блока(хедера)
+.header
+    //Настройка header__nav(навигационная панель)
+    &__nav
+        &__block
+            display: flex
+            justify-content: space-between
+            &__item
+
+    //Настройка header__body(тело хедера)
+    &__body
+        display: flex
+        &__block
+            max-width: 50%
+
+
+//Настройка маленького блока о марафоне
+.about
+    display: flex
+    justify-content: space-between
+    &__block
+                
+
+//Настройка второго блока
+.block2
+    width: 100%
+    background: url('../../img/block-2-bg.png')
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    &__block
+        width: 100%
+        &:nth-child(1)
+            display: flex
+            
+    .square
+        display: block
+        background-color: #DEC7B5
+        width: 600px
+        height: 325px
+        margin: 0 auto
+
+
+//Блок почему онлайн
+.why
+    background: url('../../img/moon-bg.png')
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: 20% 0
+    &__block
+        max-width: 50%
+        margin-left: 50%
+        &__item
+            display: flex
+            width: 100%
+            &__image
+                
+            
+            &__text
+
+
+//Блок с расписанием
+.schedule
+    background: url('../../img/block-4-bg.png')
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    padding-bottom: 500px
+    &__bigblock
+        display: flex
+    &__underline
+        height: 1px
+        width: 20%
+        background: #AB4146
