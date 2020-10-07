@@ -8,6 +8,9 @@
     color: #8E030C
     +pf_black
 
+    
+html 
+    scroll-behavior: smooth
 
 .page
     width: 100%
@@ -117,8 +120,18 @@
         max-width: 39%
         margin: 25px 10px
         margin-bottom: 40px
+        position: relative
         h2
             +header_style()
+            &::after
+                display: block
+                content: ""
+                position: relative
+                width: 95%
+                height: 30px
+                background: #DEC7B5
+                transform: translate(31px, -3px)
+                
         p
             font-size: 16px
             margin-bottom: 20px
@@ -202,6 +215,14 @@
         font-family: 'Playfair Display'
         font-style: normal
         transform: translateX(55px) 
+        &::after
+            display: block
+            content: ""
+            position: relative
+            width: 17%
+            height: 30px
+            background: #DEC7B5
+            transform: translate(151px, -3px)
 
 
     &__block
@@ -367,12 +388,26 @@
     &__content
         display: flex
         justify-content: space-between
+        position: relative
         &__block
             max-width: 46%
             &__name
+                position: relative
                 +header_style()
                 width: 45%
                 margin-bottom: 30px
+                line-height: 32px
+                z-index: 2
+            .name-span
+                display: block
+                content: ""
+                position: absolute
+                width: 12%
+                height: 25px
+                background: #DEC7B5
+                transform: translate(63px, -72px)
+                z-index: 1
+
             &__description
                 font-size: 16px
                 color: #C99D7F
@@ -551,3 +586,201 @@
                 color: #ffffff
                 text-decoration: underline
                 +bel_bold
+
+//Блок с вопросами
+.question
+    padding: 30px
+    &__header
+        +header_style()
+        margin-bottom: 80px
+        &::after
+            display: block
+            content: ""
+            position: relative
+            width: 11%
+            height: 30px
+            background: #DEC7B5
+            transform: translate(151px, -3px)
+    &__answers
+        max-width: 90%
+        margin: 0 auto
+        transition: all 0.3s ease 0s
+        &:hover
+            cursor: pointer
+        &__question
+            font-size: 23px
+            +pf_black
+            color: #447228
+            display: flex
+            justify-content: space-between
+            transition: all 0.3s ease 0s
+            .arrow
+                transform: rotate(180deg)
+        &__answer
+            visibility: hidden 
+            display: none
+            opacity: 0
+            font-size: 16px
+            color: #8E030C
+            +bel_bold
+            margin: 20px 0
+            transition: all 0.3s ease 0s
+        &.active
+            
+            .question__answers__answer
+                visibility: visible
+                display: block
+                opacity: 1
+                transition: all 0.3s ease 0s
+            .question__answers__question
+                .arrow
+                    transform: rotate(0)
+                    color: #DEC7B5
+                        
+        .underline
+            height: 2px
+            width: 20%
+            background: #8E030C
+            margin: 20px 0
+
+
+//Настройка 9-го блока
+.block9
+    background: url('../../img/block-9-bg.png')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    padding: 250px 0 30px 0
+    &__content
+        display: flex
+        justify-content: space-between
+        &__block
+            max-width: 50%
+            &__header
+                +header_style
+                width: 87.3%
+                line-height: 37px
+                margin-bottom: 25px
+                span
+                    color: #ffffff
+                    background:#447228
+            &__text
+                +bel_bold
+                font-size: 14px
+                color: #8E030C
+                margin-bottom: 75px
+                width: 92%
+            &__button
+                @extend .quote__content__block__button
+                font-size: 17px
+                padding: 15px 25px
+                
+            .button-span
+                display: block
+                position: relative
+                right: 0
+                bottom: 0
+                width: 194px
+                height: 52px
+                background: #8A030C
+                z-index: 1
+                transform: translate(27px, -41px)
+                margin-bottom: 200px
+            &__social
+                display: flex
+                color: #ffffff
+                margin-bottom: 40px
+                &__icon
+                    display: flex
+                    width: 30px
+                    height: 30px
+                    background: #447228
+                    margin: 0 5px
+                    justify-content: center
+                    align-items: center
+                    border-radius: 2px
+            &__links
+                a
+                    color: #ffffff
+                    background: #8A030C
+                    
+                p
+                    margin: 8px 0
+                    +bel_bold
+            &__INN
+                background: #DEC7B5
+                color: #8A030C
+                +bel_bold
+                font-size: 16px
+                padding: 0 2px
+                margin-top: 235%
+
+//Настройка 10-го блока
+.animals
+    padding: 30px 0 200px 0
+    background: url('../../img/block-10-bg.png')
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    &__content
+        text-align: center
+        &__header
+            +header_style
+            color: #ffffff
+            span
+                color: #ffffff
+                background: #447228
+                font-family: 'Times New Roman', Times, serif
+            
+        &__text
+            color: #ffffff
+            display: flex
+            justify-content: center
+            margin: 20px 0 40px 0
+            font-size: 16px
+            span
+                display: block
+                width: 34%
+        &__symbols
+            display: flex
+            justify-content: space-between
+            background: rgba(0, 0, 0, 0.3)
+            border-radius: 15px
+            padding: 30px
+            &__block
+                max-width: 45%
+                display: flex
+                flex-wrap: wrap
+                
+                &__icon
+                    flex: 1 0 25%
+                    &__name
+                        color: #fff
+                        font-size: 16px
+                        margin-top: 10px
+                    img
+                        max-width: 50%
+                    &:last-child
+                        transform: translateY(20px)
+                        .animals__content__symbols__block__icon__name
+                            color: #CA9E67
+                &__description
+                    color: #ffffff
+                    &__header
+                        font-size: 25px
+                        +pf-black
+                        text-align: start
+                        margin-bottom: 30px
+                    &__text
+                        text-align: start
+                        +bel_bold
+                        line-height: 18px
+
+        &__button
+            background: #447228
+            color: #ffffff
+            padding: 15px 20px
+            +bel-bold
+            font-size: 16px
+            margin-top: 30px
+
