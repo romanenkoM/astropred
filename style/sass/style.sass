@@ -1,5 +1,12 @@
+@import 'fonts'
 
 
+@mixin header_style()
+    font-size: 30px
+    text-transform: uppercase 
+    font-weight: 900
+    color: #8E030C
+    +pf_black
 
 
 .page
@@ -12,25 +19,119 @@
 
 //Настройка первого блока(хедера)
 .header
+    overflow: hidden
+    background: #E0CAB7
+    padding-bottom: 120px
     //Настройка header__nav(навигационная панель)
     &__nav
         &__block
             display: flex
             justify-content: space-between
+            align-items: baseline
+
             &__item
+                margin-top: 30px  
+                a
+                    color: #9B1F3B
+                    +bel_bold
+                    font-size: 16px
+                    button
+                        position: relative
+                        background: #447228
+                        color: #fff 
+                        padding: 10px 15px 
+                        z-index: 2
+                        +bel_bold
+                    span
+                        display: block
+                        position: relative
+                        right: 0
+                        bottom: 0
+                        width: 142px
+                        height: 35px
+                        background: #8A030C
+                        z-index: 1
+                        transform: translate(19px, -26px)
+
+
 
     //Настройка header__body(тело хедера)
     &__body
         display: flex
+        margin: 105px 0 0 0
         &__block
-            max-width: 50%
+            
+            h2
+                font-size: 60px
+                font-weight: 700
+                color: #4B673C
+                +pf_black
+            h1
+                font-size: 278px
+                font-weight: 900
+                color: #8E030C
+                font-family: 'Times New Roman', Times, serif
+            img
+                position: relative
+                transform: translate(41px, 89px) scale(1.2)
+                z-index: 20
+
+            &__item
+                display: flex
+                transform: translateX(44px)
+                p   
+                    &.green
+                        font-size: 33px 
+                        color: #4B673C
+                        font-weight: bold
+                        min-width: 140px
+                        +pf_black
+                        margin-right: 10px
+                    &.brown
+                        font-size: 18px 
+                        color: #8E030C
+                        line-height: 20px
+                        +bel_bold
+            &.text
+                width: 70%
+                transform: translateY(90px) 
+            &__button
+                margin-top: 25px
+                background:  #8E030C
+                color: #ffffff
+                padding: 15px 15px
+                font-size: 16px
+                transform: translateX(44px)
+                +bel_bold
+                text-transform: uppercase
 
 
 //Настройка маленького блока о марафоне
 .about
-    display: flex
-    justify-content: space-between
+   
+    &__bigblock
+        display: flex
+        justify-content: space-around
+
     &__block
+        max-width: 39%
+        margin: 25px 10px
+        margin-bottom: 40px
+        h2
+            +header_style()
+        p
+            font-size: 16px
+            margin-bottom: 20px
+            color: #8E030C
+            line-height: 22px
+            +bel_bold
+            span
+                color: #fff
+                background: #4B673C
+            
+
+            
+        
                 
 
 //Настройка второго блока
@@ -40,10 +141,42 @@
     background-size: cover
     background-repeat: no-repeat
     background-position: center
+    padding-top: 40px
+    padding-bottom: 60px
+    
+    
     &__block
+        display: flex
+        justify-content: space-around
         width: 100%
-        &:nth-child(1)
-            display: flex
+        margin-bottom: 50px
+        
+        
+        h2
+            width: 30%
+            font-size: 30px
+            color: #8E030C
+            text-transform: uppercase
+            font-family: 'Playfair Display'
+            transform: translateX(5px)
+            margin-left: 10px
+            span
+                width: 126%
+                display: block
+                background: #8E030C
+                color: #fff
+                
+             
+            
+            
+        p
+            width: 40%
+            font-size: 16px
+            color: #8E030C
+            line-height: 22px
+            font-family: 'Bellota Text'
+            transform: translateX(-9px)
+
             
     .square
         display: block
@@ -59,16 +192,62 @@
     background-size: contain
     background-repeat: no-repeat
     background-position: 20% 0
+    &__header
+        margin-top: 20px
+        margin-left: 30px
+        font-size: 30px
+        text-transform: uppercase
+        font-weight: 900
+        color:#4B673C 
+        font-family: 'Playfair Display'
+        font-style: normal
+        transform: translateX(55px) 
+
+
     &__block
-        max-width: 50%
-        margin-left: 50%
+        max-width: 55%
+        margin-left: 31%
+        margin-top: 50px
         &__item
             display: flex
             width: 100%
+            margin-bottom: 30px
             &__image
-                
-            
+
+                background-color: #F8F4F0
+                margin-right: 40px
+                &.first
+                    width: 40% 
+                &.second
+                    width: 54% 
+                &.third
+                    width: 77% 
+                &.fourth
+                    width: 79%
+                img 
+                    display: block
+                    height: 100%
+                    margin: 0 auto
             &__text
+                h2
+                    font-size: 25px
+                    color: #4B673C
+                    text-align: start
+                    margin-bottom: 10px
+                    +pf_black
+                   
+                  
+                p
+                    font-size: 16px
+                    color: #CEAEB2
+                    text-align: start
+                    +bel_bold
+                    line-height: 18px
+                    
+
+                  
+               
+                
 
 
 //Блок с расписанием
@@ -77,10 +256,298 @@
     background-size: cover
     background-repeat: no-repeat
     background-position: center
-    padding-bottom: 500px
+    padding-top: 50px
+    padding-bottom: 380px
     &__bigblock
         display: flex
+        justify-content: space-around
+        margin-left: 85px
+    &__block
+        &:nth-child(1)
+            width: 30%
+        &:nth-child(2)
+            width: 70%
+        
+        h2
+            +pf_black
+            margin-top: 20px
+            span
+                background: #8E030C
+                color: #fff
+                font-size: 30px
+                text-transform: uppercase 
+        &__list           
+            &__item
+                display: flex
+                padding: 15px 0px
+                &__day
+                    display: block
+                    font-size: 25px
+                    color: #8E030C
+                    +pf_black
+                    width: 17%
+                    &-description
+                        width: 60%
+                        font-size: 16px
+                        color: #8E030C
+                    
     &__underline
         height: 1px
-        width: 20%
+        width: 25%
         background: #AB4146
+
+
+//Настройка маленького блока с циататой
+.quote
+    background: #C1A28E
+    padding-top: 30px
+    &__content
+        display: flex
+        justify-content: space-around
+        &__block
+            max-width: 50%
+            &__text
+                font-size: 25px
+                +pf_ital
+                color: #fff
+                line-height: 31px
+            &__author
+                font-size: 18px
+                color: #8E030C
+                +bel_bold
+                margin-top: 5px
+                
+            &__price
+                &-old
+                    font-size: 30px
+                    text-align: right
+                    color: #ffffff
+                    position: relative
+                    margin-bottom: 20px
+                    font-weight: 900
+                    margin-bottom: 30px
+                    &::before 
+                        border-bottom: 2px solid #fff
+                        position: absolute
+                        content: ""
+                        width: 45%
+                        height: 50%
+                        transform: rotate(12deg)
+
+                &-new
+                    font-size: 35px
+                    text-align: right
+                    font-weight: 900
+                    margin-bottom: 30px
+                    .price-style
+                        color: #ffffff
+                        background: #4B673C
+            &__button
+                position: relative
+                background: #447228
+                color: #fff 
+                padding: 10px 15px 
+                z-index: 2
+                +bel_bold
+
+            .button-span
+                display: block
+                position: relative
+                right: 0
+                bottom: 0
+                width: 142px
+                height: 35px
+                background: #8A030C
+                z-index: 1
+                transform: translate(19px, -26px)
+
+//Настройка блока про женщину  
+.woman
+    padding: 30px 0
+    &__content
+        display: flex
+        justify-content: space-between
+        &__block
+            max-width: 46%
+            &__name
+                +header_style()
+                width: 45%
+                margin-bottom: 30px
+            &__description
+                font-size: 16px
+                color: #C99D7F
+                text-align: start
+                +bel_bold
+                line-height: 18px
+                margin-bottom: 30px
+            &__courses
+                display: flex
+                &__item
+                    flex: 0 0 33.33%
+                    &__num
+                        font-size: 25px
+                        font-weight: 900
+                        color: #447228
+                        margin-bottom: 10px
+                    &__text
+                        font-size: 16px
+                        color: #C99D7F
+                        text-align: start
+                        +bel_bold
+                        line-height: 18px
+                        margin-bottom: 30px
+            &__button
+                @extend .quote__content__block__button
+                text-transform: uppercase
+                padding: 10px 40px
+            .button-span
+                display: block
+                position: relative
+                right: 0
+                bottom: 0
+                width: 158px
+                height: 35px
+                background: #8A030C
+                z-index: 1
+                transform: translate(19px, -26px)
+
+//Настройка 6-го блока
+.block6
+    background: url(../../img/block-6-bg.png)
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    padding: 50px 0 180px 0
+    &__content
+        display: flex
+        justify-content: space-between
+        
+        &__block
+            max-width: 45%
+            display: flex
+            flex-direction: column
+            &__year
+                font-size: 35px
+                color: #ffffff
+                font-weight: 900
+                margin-bottom: 25px
+            &__description
+                flex: 0 1 90%
+                width: 85%
+                color: #ffffff
+                font-size: 14px
+                +bel_bold
+                line-height: 18px
+                span
+                    background: #8A030C
+            &__button
+                width: 85%
+                color: #ffffff
+                background: #8A030C
+                padding: 15px 40px
+                text-transform: uppercase
+                +bel_bold
+            &__question
+                font-size: 22px
+                +pf_black
+                color: #8A030C
+                margin-bottom: 15px
+                
+            &__answer
+                +bel_bold
+                color: #8A030C
+                margin-bottom: 20px
+                &:last-child
+                    margin: 0
+
+
+
+//Настройка блока что нужно
+
+.needs
+    background: url(../../img/block-7-bg.png)
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    padding-top: 60px
+    padding-bottom: 200px
+    &__content
+        margin-left: 58.3%
+        &__header
+            +header-style
+            color: #ffffff
+            margin-bottom: 30px
+            span
+                display: block
+                background: #447228
+                width: 96%
+                margin-top: 9px
+        &__description
+            +bel_bold
+            color: #8A030C
+            margin-bottom: 150px
+        &__button
+            @extend .quote__content__block__button
+            margin-left: 49%
+            font-size: 17px
+            padding: 15px 25px
+        .button-span
+            display: block
+            position: relative
+            right: 0
+            bottom: 0
+            width: 194px
+            height: 52px
+            background: #8A030C
+            z-index: 1
+            margin-left: 62%
+            transform: translate(-24px, -40px)
+                
+
+
+//Настройка блока про возврат средств
+
+.cash
+    background: #8E030C
+    padding: 30px 0 35px 0
+    &__content
+        display: flex
+        justify-content: space-between
+        &__block
+            display: flex
+            flex-direction: column
+            width: 40%
+            justify-content: center
+            &__header
+                +header-style
+                color: #ffffff
+                margin-bottom: 20px
+                flex: 0 1 100%
+                span
+                    display: block
+                    background: #447228
+                    width: 58%
+                    margin-bottom: 5px
+            &__description
+                
+                color: #ffffff
+                +bel_bold
+                width: 79%
+            &__price
+                &-old
+                    @extend .quote__content__block__price-old
+                    text-align: center
+                    &::before
+                        width: 18%
+                &-new
+                    @extend .quote__content__block__price-new
+                    text-align: center
+                    span
+                        color: #ffffff
+                        background: #447228
+            &__link
+                display: block
+                text-align: center
+                color: #ffffff
+                text-decoration: underline
+                +bel_bold

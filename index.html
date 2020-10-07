@@ -21,7 +21,7 @@
                         <li class="header__nav__block__item"><a href="#">РАСПИСАНИЕ</a></li>
                         <li class="header__nav__block__item"><a href="#">ЧТО НУЖНО? </a></li>
                         <li class="header__nav__block__item"><a href="#">+7 (499) 380-80-99</a></li>
-                        <li class="header__nav__block__item"><a href="#"><button>ЗАКАЗАТЬ ЗВОНОК</button></a></li>
+                        <li class="header__nav__block__item"><a href="#"><button>ЗАКАЗАТЬ ЗВОНОК</button><span></span></a></li>
                     </ul>
                 </nav>
                 <!--Тело хедера-->
@@ -29,12 +29,12 @@
                     <div class="header__body__block">
                         <img src="img/woman.png" alt="" class="header__body__block__img">
                     </div>
-                    <div class="header__body__block">
+                    <div class="header__body__block text">
                         <h2>АСТРОПРОГНОЗ</h2>
                         <h1>2021</h1>
                         <div class="header__body__block__item">
-                            <p>с 17 по 21 ноября</p>
-                            <p>
+                            <p class="green">с 17 по 21 ноября</p>
+                            <p class="brown">
                                 САМЫЙ ПОПУЛЯРНЫЙ СЕМИНАР
                                 ОЛЬГИ НИКОЛАЕВОЙ ВОЗВРАЩАЕТСЯ
                                 В НОВОМ ФОРМАТЕ
@@ -51,20 +51,22 @@
                 <!--Маленький блок о марафоне-->
                 
                     <div class="about">
-                        <div class="container"></div>
-                            <div class="about__block">
-                                <h2>О марафоне</h2>
-                            </div>
-                            <div class="about__block">
-                                <p>
-                                    Астропрогноз - это больше не однодневное событие,
-                                    а 5-дневный онлайн-марафон. 
-                                </p>
-                                <p>
-                                    Еще глубже, еще объемнее, еще удивительнее.
-                                    Информации и действенных практик хватит на
-                                    каждый день наступающего года.
-                                </p>
+                        <div class="container">
+                            <div class="about__bigblock">
+                                <div class="about__block">
+                                    <h2>О марафоне</h2>
+                                </div>
+                                <div class="about__block">
+                                    <p>
+                                        Астропрогноз - это больше не однодневное событие,
+                                       <span> а 5-дневный онлайн-марафон.</span> 
+                                    </p>
+                                    <p>
+                                        Еще глубже, еще объемнее, еще удивительнее.
+                                        Информации и действенных практик хватит на
+                                        каждый день наступающего года.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -79,7 +81,7 @@
                             <h2>
                                 НАСТРОЕНЫ
                                 СКЕПТИЧНО?
-                                ТОГДА ВЫ УДИВИТЕСЬ.
+                                <span>ТОГДА ВЫ УДИВИТЕСЬ.</span>
                             </h2>
                             <p>
                                 Кто бы мог подумать год назад про эпидемию,
@@ -98,54 +100,54 @@
                 <!--Блок "почему онлайн"-->
                 <div class="why">
                    <div class="container">
-                    <h2>Почему онлайн?</h2>
-                    <ul class="why__block">
-                        <li class="why__block__item">
-                            <div class="why__block__item__image"><img src="img/easy.svg" alt=""></div>
+                    <h2 class="why__header">Почему онлайн?</h2>
+                    <div class="why__block">
+                        <div class="why__block__item">
+                            <div class="why__block__item__image first"><img  src="img/easy.svg" alt=""></div>
                             <div class="why__block__item__text">
-                                <h2>УДОБНО</h2>
-                                <p>
+                                <h2 >УДОБНО</h2>
+                                <p >
                                     Подключайтесь из любой точки планеты, не выходя
                                     из дома. Слушайте лекции, когда вам удобно.
                                 </p>
                             </div>
-                        </li>
-                        <li class="why__block__item">
-                            <div class="why__block__item__image"><img src="img/scale.svg" alt=""></div>
+                        </div>
+                        <div class="why__block__item">
+                            <div class="why__block__item__image second"><img class="second" src="img/scale.svg" alt=""></div>
                             <div class="why__block__item__text">
-                                <h2>МАСШТАБНО</h2>
-                                <p>
+                                <h2 >МАСШТАБНО</h2>
+                                <p >
                                     5 дней марафона – больше знаний. В очном формате
                                     мы были ограничены условиями аренды залов. Теперь
                                     мы не ограничены ничем.
                                 </p>
                             </div>
-                        </li>
-                        <li class="why__block__item">
-                            <div class="why__block__item__image"><img src="img/useful.svg" alt=""></div>
+                        </div>
+                        <div class="why__block__item">
+                            <div class="why__block__item__image third"><img class="third" src="img/useful.svg" alt=""></div>
                             <div class="why__block__item__text">
-                                <h2>ПОЛЕЗНО</h2>
-                                <p>
+                                <h2 >ПОЛЕЗНО</h2>
+                                <p >
                                     Астропрогноз пройдет в формате онлайн-марафона.
                                     Это значит, что внимание будет уделено каждому
                                     участнику. Вы получите всестороннюю поддержку
                                     Ольги Николаевой и ее команды. 
                                 </p>
                             </div>
-                        </li>
-                        <li class="why__block__item">
-                            <div class="why__block__item__image"><img src="img/individually.svg" alt=""></div>
+                        </div>
+                        <div class="why__block__item">
+                            <div class="why__block__item__image fourth"><img class="fourth" src="img/individually.svg" alt=""></div>
                             <div class="why__block__item__text">
-                                <h2>ИНДИВИДУАЛЬНО</h2>
-                                <p>
+                                <h2 >ИНДИВИДУАЛЬНО</h2>
+                                <p >
                                     Онлайн-формат позволяет включать больше практики.
                                     Вместе с единомышленниками вы подробнее
                                     разберете свои карты, получите ответы на личные
                                     вопросы и индивидуальные ритуалы.
                                 </p>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                    </div>
                 </div>
                 <!--Конец блока "Полчему онлайн-->
@@ -156,46 +158,42 @@
                       <div class="container">
                         <div class="schedule__bigblock">
                             <div class="schedule__block">
-                                <h2>Расписание</h2>
+                                <h2><span>Расписание</span></h2>
                             </div>
                             <div class="schedule__block">
                                 <ul class="schedule__block__list">
                                     <li class="schedule__block__list__item">
-                                        <p><span class="schedule__block__list__item__day">1 день</span>
-                                            Подготовительный. Познакомимся с участниками, решим
-                                            технические вопросы. Каждый из вас с нашей помощью
-                                            построит личные карты Ба Цзы и Джйотиш, карты своих
-                                            квартир и домов. 
-                                        </p>
-                                        <hr class="schedule__underline">
-                                    </li>
-                                    <li class="schedule__block__list__item">
-                                        <p><span class="schedule__block__list__item__day">2 день</span>
-                                            Поговорим об общих тенденциях года, используя несколько
-                                            видов астрологии: Ба Цзы, Цзы Вэй Доу Шу. Проведем
-                                            несколько практических занятий с фэншуй-ежедневником.
-                                            Узнаем даты денежных стрижек и финансовых активностей.
-                                        </p> 
-                                        <hr class="schedule__underline">   
-                                    </li>
-                                    <li class="schedule__block__list__item">
-                                       <p><span class="schedule__block__list__item__day">3 день</span>
-                                        Рассмотрим фэншуй для денег и бизнеса. Подробно разберем
-                                        летящие звезды года, особые комбинации, возможность
-                                        путешествий. Определим формулы для богатства.
-    
-                                    </p> 
-                                    <hr class="schedule__underline">
-                                    </li>
-                                    <li class="schedule__block__list__item">
-                                        <p><span class="schedule__block__list__item__day">4 день</span>
-                                            Личные прогнозы на 2021 год. Рассмотрим детально ваши
-                                            гороскопы, включая китайскую астрологию, Най Инь.
-                                            Разберем карты детей, которые будут зачаты или рождены
-                                            в 2021 году.
+                                            <p class="schedule__block__list__item__day">1 день</p>
+                                            <p class="schedule__block__list__item__day-description">Подготовительный. Познакомимся с участниками, решим
+                                                технические вопросы. Каждый из вас с нашей помощью
+                                                построит личные карты Ба Цзы и Джйотиш, карты своих
+                                                квартир и домов. </p>
                                             
-                                        </p>
-                                        <hr class="schedule__underline">
+                                    </li>
+                                    <hr class="schedule__underline">
+                                    <li class="schedule__block__list__item">
+                                            <p class="schedule__block__list__item__day">2 день</p>
+                                            <p class="schedule__block__list__item__day-description">Поговорим об общих тенденциях года, используя несколько
+                                                видов астрологии: Ба Цзы, Цзы Вэй Доу Шу. Проведем
+                                                несколько практических занятий с фэншуй-ежедневником.
+                                                Узнаем даты денежных стрижек и финансовых активностей.</p>
+                                            
+                                    </li>
+                                    <hr class="schedule__underline">   
+                                    <li class="schedule__block__list__item">
+                                        <p class="schedule__block__list__item__day">3 день</p>
+                                        <p class="schedule__block__list__item__day-description">Рассмотрим фэншуй для денег и бизнеса. Подробно разберем
+                                            летящие звезды года, особые комбинации, возможность
+                                            путешествий. Определим формулы для богатства.</p>
+                                    </li>
+                                    <hr class="schedule__underline">
+                                    <li class="schedule__block__list__item">
+                                            <p class="schedule__block__list__item__day">4 день</p>
+                                            <p class="schedule__block__list__item__day-description">Личные прогнозы на 2021 год. Рассмотрим детально ваши
+                                                гороскопы, включая китайскую астрологию, Най Инь.
+                                                Разберем карты детей, которые будут зачаты или рождены
+                                                в 2021 году.
+                                            </p>
                                     </li>
                                 </ul>
                             </div>
@@ -204,10 +202,182 @@
                     </div>
                 <!--Конец блока с расписанием-->
 
+                <!--Маленький блок с цитатой-->
+                <div class="quote">
+                    <div class="container">
+                        <div class="quote__content">
+                            <div class="quote__content__block">
+                                <p class="quote__content__block__text">
+                                    «Мудрый человек, знакомый с природой
+                                    звезд, имеет возможность предотвращать
+                                    многие из их влияний и подготовиться
+                                    к ним до их наступления.»
+                                </p>
+                                <p class="quote__content__block__author">
+                                    Птолемей
+                                </p>
+                            </div>
+                            <div class="quote__content__block">
+                                <p class="quote__content__block__price-old">4400</p>
+                                <p class="quote__content__block__price-new"><span class="price-style">440 руб.</span></p>
+                                <a href="#"><button class="quote__content__block__button">ЗАКАЗАТЬ ЗВОНОК</button></a>
+                                <span class="button-span"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Конец маленького блока с цитатой-->
 
 
+                <!--Блок про женщину-->
+                <div class="woman">
+                    <div class="container">
+                        <div class="woman__content">
+                            <div class="woman__content__block">
+                                <h2 class="woman__content__block__name">ОЛЬГА
+                                    НИКОЛАЕВА</h2>
+                                <p class="woman__content__block__description">
+                                    Мастер фэншуй из топ-10 самых популярных специалистов
+                                    в России. Проходила обучение в традиционной школе
+                                    Гранд-мастера Чан Кун Ва (в списке пяти великих фэн-шуй
+                                    мастеров мира). В своей работе совмещает китайскую
+                                    метафизику (фэншуй) и индийское учение о пространстве
+                                    (васту). Это сложный подход, который решаются
+                                    реализовать не многие мастера. <br><br>
+                                    Ведет семинары по всему миру, проводит выездные
+                                    ретриты в Индии и Дубаи, меняет жизнь, изменяя
+                                    пространство.<br><br>
+                                    Применяет методики: фэншуй, васту, Ба Цзы, Джйотиш,
+                                    Цзы Вэй Доу Шу и многие другие направления восточной
+                                    астрологии и метафизики. Консультирует по бизнесу и
+                                    семейным отношениям.
+                                </p>   
+                                <div class="woman__content__block__courses">
+                                    <div class="woman__content__block__courses__item">
+                                        <p class="woman__content__block__courses__item__num">8400+</p>
+                                        <p class="woman__content__block__courses__item__text">
+                                            проведенных
+                                            консультаций
+                                        </p>
+                                    </div>
+                                    <div class="woman__content__block__courses__item">
+                                        <p class="woman__content__block__courses__item__num">650+</p>
+                                        <p class="woman__content__block__courses__item__text">
+                                            семинаров
+                                            и видеокурсов
+                                        </p>
+                                    </div>
+                                    <div class="woman__content__block__courses__item">
+                                        <p class="woman__content__block__courses__item__num">1100+</p>
+                                        <p class="woman__content__block__courses__item__text">
+                                            более 1100
+                                            учеников
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <a href="#"><button class="woman__content__block__button">Записаться</button></a>
+                                <span class="button-span"></span>
+                            </div>
+
+                            <div class="woman__content__block">
+                                <img src="img/woman-2.png" alt="" class="woman__content__block__image">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--Конец блока-->
 
 
+                <!--Большой 6-й блок "2021"-->
+                <div class="block6">
+                    <div class="container">
+                        <div class="block6__content">
+                            <div class="block6__content__block">
+                                <p class="block6__content__block__year">2021</p>
+                                <p class="block6__content__block__description">
+                                    <span>2021 год будет безденежным.</span> Мир ждут экономические кризисы, обостренная борьба за власть,
+                                    природные катаклизмы. <br><br> 
+                                    В какой сфере наступит кризис? Куда и когда не
+                                    следует ехать в путешествие? Об этом вы узнаете
+                                    на Астропрогнозе.
+                                </p>
+                                <button class="block6__content__block__button">УЗНАТЬ СВОЙ ГОРОСКОП</button>
+                            </div>
+                            <div class="block6__content__block">
+                                <p class="block6__content__block__question">Кто сможет заработать?</p>
+                                <p class="block6__content__block__answer">
+                                    Немногие. Но будут в году особые месяцы, которые
+                                    можно использовать по максимуму. Победят те, кто
+                                    будет учиться новому и неординарно подойдут к решению задач.
+                                </p>
+                                <p class="block6__content__block__question">Что с работой?</p>
+                                <p class="block6__content__block__answer">
+                                    Будет много конкуренции, ожидаются массовые сокращения. Но настоящий успех придет к тем, кто
+                                    умеет работать в команде, особенно в сфере креативных профессий.
+                                </p>
+                                <p class="block6__content__block__question">Кого ждет успех?</p>
+                                <p class="block6__content__block__answer">
+                                    В первую очередь, для тех, у кого в карте выражен
+                                    сильный огонь. Эти люди смогут оказаться в нужное
+                                    время в нужном месте, ухватить удачу. Но есть еще
+                                    несколько показателей «счастливчика года», о них
+                                    поговорим на Астропрогнозе.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Конец блока-->
+
+
+                <!--Блок что нужно для участия-->
+                <div class="needs">
+                    <div class="container">
+                        <div class="needs__content">
+                            <h2 class="needs__content__header">
+                                ЧТО НУЖНО ДЛЯ
+                                <span>УЧАСТИЯ В МАРАФОНЕ?</span>
+                            </h2>
+                            <p class="needs__content__description">
+                                Марафон будет доступен в любой социальной сети. Вас
+                                ждут ежедневные прямые эфиры с комментариями и методическими материалами. Все прямые эфиры сохранятся в
+                                записи, вы сможете их пересматривать в любое время. В
+                                закрытом онлайн-чате Ольга Николаева и ее команда будут
+                                с вами 24/7.
+                            </p>
+                            <button class="needs__content__button">
+                                ЗАКАЗАТЬ ЗВОНОК
+                            </button>
+                            <span class="button-span"></span>
+                        </div>
+                    </div>
+                </div>
+                <!--Конец блока-->
+                
+                <!--Блок про возврат денег-->
+                    <div class="cash">
+                        <div class="container">
+                            <div class="cash__content">
+                                <div class="cash__content__block">
+                                    <h2 class="cash__content__block__header"><span>МЫ УВЕРЕНЫ</span>
+                                        В СВОИХ ЗНАНИЯХ
+                                    </h2>
+                                    <p class="cash__content__block__description">
+                                        НО ЕСЛИ ВЫ НАЙДЕТЕ ПРОГНОЗ ЛУЧШЕ,
+                                        МЫ ВЕРНЕМ ВАМ ДЕНЬГИ
+                                    </p>
+                                </div>
+                                <div class="cash__content__block">
+                                    <p class="cash__content__block__price-old">4400</p>
+                                    <p class="cash__content__block__price-new"><span>440 руб.</span></p>
+                                    <a href="#" class="cash__content__block__link">Простые условия возврата</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!--Конец блока-->
         </div>
     </body>
 </html>
