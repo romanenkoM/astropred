@@ -17,14 +17,150 @@ html
 
 
 .container
-    max-width: 65%
+    max-width: 80%
     margin: 0 auto
+
+
+
+
+
+
+//Настройка модального окна
+.popup
+    position: fixed
+    width: 100%
+    height: 100%
+    background-color: rgba(0,0,0, 0.8)
+    top: 0
+    left: 0 
+    z-index: 50
+    opacity: 0
+    visibility: hidden
+    overflow-y: auto
+    overflow-x: hidden
+    transition: all 0.8s ease 0s
+    &__times
+        display: block
+        width: 40px
+        height: 40px
+        position: relative
+        top: 0
+        left: 0
+        &::before,
+        &::after
+            content: ""
+            display: inline-block
+            width: 100%
+            height: 2px
+            background: #8e030c
+            position: absolute
+            top: 50%
+            left: 0
+        &::before
+            transform: rotate(45deg)
+
+        &::after
+            transform: rotate(-45deg)
+            
+    &__body
+        min-height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 30px 10px
+
+    &__content
+        background: #ffffff url('../../img/moon-bg.png')
+        background-repeat: no-repeat
+        background-position: center
+        background-size: 74%
+        text-align: center
+        color: #fff
+        max-width: 700px
+        padding: 50px 0px 75px
+        position: relative
+        border: 3px solid #8e030c
+        border-radius: 23px
+        opacity: 0
+        transition: all 0.8s ease 0s
+        transform: perspective(600px)  translate(0px, -100%) rotateX(45deg)
+        display: flex
+        flex-direction: column
+        align-items: center
+
+
+    &__close
+        position: absolute
+        right: 20px
+        top: 20px
+        font-size: 20px
+        text-decoration: none
+    &__title
+        font-size: 18px
+        margin: 0 0 1em 0
+        color: #8e030c
+        +bel_bold
+
+    &.open
+        opacity: 1
+        visibility: visible
+        .popup__content
+            transform: perspective(600px)  translate(0px, 0px)  rotateX(0deg)
+            opacity: 1
+
+    &__input 
+        padding: 26px 0px 0px 34px
+        margin: 0 -15px
+        margin-bottom: 15px
+        border-radius: 23px
+        border: none
+        resize: none
+        width: 100%
+        
+        &__block
+            width: 77%
+            &__input
+                width: 100%
+                border-bottom: 1px solid #c1757a
+                padding: 0 125px 5px 0px
+                +bel_bold
+                font-size: 18px
+                color: #c1757a
+                margin-top: 50px
+                background-color: transparent
+    &__button
+        display: block
+        border: none
+        background: #8e030c
+        border-radius: 10px
+        width: 83%
+        font-size: 16px
+        padding: 22px 0
+        margin: 0 auto
+        text-transform: uppercase
+        color: #ffffff
+        +bel_bold
+        margin-top: 50px
+        &:hover
+            cursor: pointer
+    &__agree
+        color: #c1757a
+        +bel_bold
+        text-align: start
+        width: 80%
+        margin-top: 30px
+
+
+
+
+
+
+
 
 //Настройка первого блока(хедера)
 .header
     overflow: hidden
     background: #E0CAB7
-    padding-bottom: 120px
     //Настройка header__nav(навигационная панель)
     &__nav
         &__block
@@ -37,7 +173,7 @@ html
                 a
                     color: #9B1F3B
                     +bel_bold
-                    font-size: 16px
+                    font-size: 18.5px
                     button
                         position: relative
                         background: #447228
@@ -61,7 +197,6 @@ html
     //Настройка header__body(тело хедера)
     &__body
         display: flex
-        margin: 105px 0 0 0
         &__block
             
             h2
@@ -69,20 +204,23 @@ html
                 font-weight: 700
                 color: #4B673C
                 +pf_black
+                margin-bottom: 30px
             h1
                 font-size: 278px
                 font-weight: 900
                 color: #8E030C
                 font-family: 'Times New Roman', Times, serif
-            img
+            &__img
                 position: relative
-                transform: translate(41px, 89px) scale(1.2)
+                transform: translate(96px, 30px)
                 z-index: 20
 
             &__item
                 display: flex
                 transform: translateX(44px)
                 p   
+                    margin-top: 30px
+                    transform: translateX(40px)
                     &.green
                         font-size: 33px 
                         color: #4B673C
@@ -90,21 +228,24 @@ html
                         min-width: 140px
                         +pf_black
                         margin-right: 10px
+                        font-weight: 400
+                        max-width: 160px
                     &.brown
                         font-size: 18px 
                         color: #8E030C
-                        line-height: 20px
+                        line-height: 23.33px
                         +bel_bold
+                        max-width: 351px
             &.text
                 width: 70%
-                transform: translateY(90px) 
+                transform: translateY(120px)
             &__button
                 margin-top: 25px
                 background:  #8E030C
                 color: #ffffff
                 padding: 15px 15px
                 font-size: 16px
-                transform: translateX(44px)
+                transform: translateX(84px)
                 +bel_bold
                 text-transform: uppercase
 
@@ -202,9 +343,9 @@ html
 //Блок почему онлайн
 .why
     background: url('../../img/moon-bg.png')
-    background-size: contain
+    background-size: 39%
     background-repeat: no-repeat
-    background-position: 20% 0
+    background-position: 5% 77%
     &__header
         margin-top: 20px
         margin-left: 30px
@@ -227,7 +368,7 @@ html
 
     &__block
         max-width: 55%
-        margin-left: 31%
+        margin-left: 45%
         margin-top: 50px
         &__item
             display: flex
@@ -277,8 +418,8 @@ html
     background-size: cover
     background-repeat: no-repeat
     background-position: center
-    padding-top: 50px
-    padding-bottom: 380px
+    padding-top: 20px
+    padding-bottom: 277px
     &__bigblock
         display: flex
         justify-content: space-around
@@ -288,6 +429,7 @@ html
             width: 30%
         &:nth-child(2)
             width: 70%
+            transform: translateX(235px)
         
         h2
             +pf_black
@@ -311,6 +453,7 @@ html
                         width: 60%
                         font-size: 16px
                         color: #8E030C
+                        +bel_bold
                     
     &__underline
         height: 1px
@@ -332,6 +475,7 @@ html
                 +pf_ital
                 color: #fff
                 line-height: 31px
+                font-weight: 200
             &__author
                 font-size: 18px
                 color: #8E030C
@@ -340,6 +484,7 @@ html
                 
             &__price
                 &-old
+                    display: block
                     font-size: 30px
                     text-align: right
                     color: #ffffff
@@ -504,10 +649,11 @@ html
     background-position: center
     background-size: cover
     background-repeat: no-repeat
-    padding-top: 60px
+    padding-top: 16px
     padding-bottom: 200px
     &__content
         margin-left: 58.3%
+        margin-top: 34px
         &__header
             +header-style
             color: #ffffff
@@ -754,12 +900,15 @@ html
                 
                 &__icon
                     flex: 1 0 25%
+                    
                     &__name
                         color: #fff
                         font-size: 16px
                         margin-top: 10px
                     img
                         max-width: 50%
+                        &:hover
+                        cursor: pointer
                     &:last-child
                         transform: translateY(20px)
                         .animals__content__symbols__block__icon__name
@@ -784,3 +933,5 @@ html
             font-size: 16px
             margin-top: 30px
 
+.hide
+    display: none

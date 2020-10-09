@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Bellota Text';
   src: local("Bellota Text Bold"), local("BellotaText-Bold"), url("../../fonts/Bellotatextbold.woff2") format("woff2"), url("../../fonts/Bellotatextbold.woff") format("woff"), url("../../fonts/Bellotatextbold.ttf") format("truetype");
-  font-weight: 700;
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -28,14 +28,188 @@ html {
 }
 
 .container {
-  max-width: 65%;
+  max-width: 80%;
   margin: 0 auto;
+}
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  z-index: 50;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.popup__times {
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.popup__times::before, .popup__times::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background: #8e030c;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.popup__times::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.popup__times::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.popup__body {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px 10px;
+}
+
+.popup__content {
+  background: #ffffff url("../../img/moon-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 74%;
+  text-align: center;
+  color: #fff;
+  max-width: 700px;
+  padding: 50px 0px 75px;
+  position: relative;
+  border: 3px solid #8e030c;
+  border-radius: 23px;
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+  -webkit-transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+          transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popup__close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.popup__title {
+  font-size: 18px;
+  margin: 0 0 1em 0;
+  color: #8e030c;
+  font-family: 'Bellota Text';
+  font-weight: 900;
+  font-style: normal;
+}
+
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup.open .popup__content {
+  -webkit-transform: perspective(600px) translate(0px, 0px) rotateX(0deg);
+          transform: perspective(600px) translate(0px, 0px) rotateX(0deg);
+  opacity: 1;
+}
+
+.popup__input {
+  padding: 26px 0px 0px 34px;
+  margin: 0 -15px;
+  margin-bottom: 15px;
+  border-radius: 23px;
+  border: none;
+  resize: none;
+  width: 100%;
+}
+
+.popup__input__block {
+  width: 77%;
+}
+
+.popup__input__block__input {
+  width: 100%;
+  border-bottom: 1px solid #c1757a;
+  padding: 0 125px 5px 0px;
+  font-family: 'Bellota Text';
+  font-weight: 900;
+  font-style: normal;
+  font-size: 18px;
+  color: #c1757a;
+  margin-top: 50px;
+  background-color: transparent;
+}
+
+.popup__button {
+  display: block;
+  border: none;
+  background: #8e030c;
+  border-radius: 10px;
+  width: 83%;
+  font-size: 16px;
+  padding: 22px 0;
+  margin: 0 auto;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: 'Bellota Text';
+  font-weight: 900;
+  font-style: normal;
+  margin-top: 50px;
+}
+
+.popup__button:hover {
+  cursor: pointer;
+}
+
+.popup__agree {
+  color: #c1757a;
+  font-family: 'Bellota Text';
+  font-weight: 900;
+  font-style: normal;
+  text-align: start;
+  width: 80%;
+  margin-top: 30px;
 }
 
 .header {
   overflow: hidden;
   background: #E0CAB7;
-  padding-bottom: 120px;
 }
 
 .header__nav__block {
@@ -57,9 +231,9 @@ html {
 .header__nav__block__item a {
   color: #9B1F3B;
   font-family: 'Bellota Text';
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
-  font-size: 16px;
+  font-size: 18.5px;
 }
 
 .header__nav__block__item a button {
@@ -69,7 +243,7 @@ html {
   padding: 10px 15px;
   z-index: 2;
   font-family: 'Bellota Text';
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
 }
 
@@ -90,7 +264,6 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 105px 0 0 0;
 }
 
 .header__body__block h2 {
@@ -100,6 +273,7 @@ html {
   font-family: 'Playfair Display';
   font-weight: 900;
   font-style: normal;
+  margin-bottom: 30px;
 }
 
 .header__body__block h1 {
@@ -109,10 +283,10 @@ html {
   font-family: 'Times New Roman', Times, serif;
 }
 
-.header__body__block img {
+.header__body__block__img {
   position: relative;
-  -webkit-transform: translate(41px, 89px) scale(1.2);
-          transform: translate(41px, 89px) scale(1.2);
+  -webkit-transform: translate(96px, 30px);
+          transform: translate(96px, 30px);
   z-index: 20;
 }
 
@@ -124,6 +298,12 @@ html {
           transform: translateX(44px);
 }
 
+.header__body__block__item p {
+  margin-top: 30px;
+  -webkit-transform: translateX(40px);
+          transform: translateX(40px);
+}
+
 .header__body__block__item p.green {
   font-size: 33px;
   color: #4B673C;
@@ -133,21 +313,24 @@ html {
   font-weight: 900;
   font-style: normal;
   margin-right: 10px;
+  font-weight: 400;
+  max-width: 160px;
 }
 
 .header__body__block__item p.brown {
   font-size: 18px;
   color: #8E030C;
-  line-height: 20px;
+  line-height: 23.33px;
   font-family: 'Bellota Text';
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
+  max-width: 351px;
 }
 
 .header__body__block.text {
   width: 70%;
-  -webkit-transform: translateY(90px);
-          transform: translateY(90px);
+  -webkit-transform: translateY(120px);
+          transform: translateY(120px);
 }
 
 .header__body__block__button {
@@ -156,10 +339,10 @@ html {
   color: #ffffff;
   padding: 15px 15px;
   font-size: 16px;
-  -webkit-transform: translateX(44px);
-          transform: translateX(44px);
+  -webkit-transform: translateX(84px);
+          transform: translateX(84px);
   font-family: 'Bellota Text';
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
   text-transform: uppercase;
 }
@@ -206,7 +389,7 @@ html {
   color: #8E030C;
   line-height: 22px;
   font-family: 'Bellota Text';
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
 }
 
@@ -273,9 +456,9 @@ html {
 
 .why {
   background: url("../../img/moon-bg.png");
-  background-size: contain;
+  background-size: 39%;
   background-repeat: no-repeat;
-  background-position: 20% 0;
+  background-position: 5% 77%;
 }
 
 .why__header {
@@ -304,7 +487,7 @@ html {
 
 .why__block {
   max-width: 55%;
-  margin-left: 31%;
+  margin-left: 45%;
   margin-top: 50px;
 }
 
@@ -358,7 +541,7 @@ html {
   color: #CEAEB2;
   text-align: start;
   font-family: 'Bellota Text';
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
   line-height: 18px;
 }
@@ -368,8 +551,8 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding-top: 50px;
-  padding-bottom: 380px;
+  padding-top: 20px;
+  padding-bottom: 277px;
 }
 
 .schedule__bigblock {
@@ -387,6 +570,8 @@ html {
 
 .schedule__block:nth-child(2) {
   width: 70%;
+  -webkit-transform: translateX(235px);
+          transform: translateX(235px);
 }
 
 .schedule__block h2 {
@@ -424,6 +609,9 @@ html {
   width: 60%;
   font-size: 16px;
   color: #8E030C;
+  font-family: 'Bellota Text';
+  font-weight: 900;
+  font-style: normal;
 }
 
 .schedule__underline {
@@ -453,20 +641,23 @@ html {
   font-size: 25px;
   font-family: 'Playfair Display';
   font-style: italic;
+  font-weight: 500;
   color: #fff;
   line-height: 31px;
+  font-weight: 200;
 }
 
 .quote__content__block__author {
   font-size: 18px;
   color: #8E030C;
   font-family: 'Bellota Text';
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
   margin-top: 5px;
 }
 
 .quote__content__block__price-old, .cash__content__block__price-old {
+  display: block;
   font-size: 30px;
   text-align: right;
   color: #ffffff;
@@ -505,7 +696,7 @@ html {
   padding: 10px 15px;
   z-index: 2;
   font-family: 'Bellota Text';
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
 }
 
@@ -572,7 +763,7 @@ html {
   color: #C99D7F;
   text-align: start;
   font-family: 'Bellota Text';
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
   line-height: 18px;
   margin-bottom: 30px;
@@ -602,7 +793,7 @@ html {
   color: #C99D7F;
   text-align: start;
   font-family: 'Bellota Text';
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
   line-height: 18px;
   margin-bottom: 30px;
@@ -669,7 +860,7 @@ html {
   color: #ffffff;
   font-size: 14px;
   font-family: 'Bellota Text';
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
   line-height: 18px;
 }
@@ -685,7 +876,7 @@ html {
   padding: 15px 40px;
   text-transform: uppercase;
   font-family: 'Bellota Text';
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
 }
 
@@ -700,7 +891,7 @@ html {
 
 .block6__content__block__answer {
   font-family: 'Bellota Text';
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
   color: #8A030C;
   margin-bottom: 20px;
@@ -715,12 +906,13 @@ html {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 60px;
+  padding-top: 16px;
   padding-bottom: 200px;
 }
 
 .needs__content {
   margin-left: 58.3%;
+  margin-top: 34px;
 }
 
 .needs__content__header {
@@ -744,7 +936,7 @@ html {
 
 .needs__content__description {
   font-family: 'Bellota Text';
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
   color: #8A030C;
   margin-bottom: 150px;
@@ -823,7 +1015,7 @@ html {
 .cash__content__block__description {
   color: #ffffff;
   font-family: 'Bellota Text';
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
   width: 79%;
 }
@@ -851,7 +1043,7 @@ html {
   color: #ffffff;
   text-decoration: underline;
   font-family: 'Bellota Text';
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
 }
 
@@ -920,7 +1112,7 @@ html {
   font-size: 16px;
   color: #8E030C;
   font-family: 'Bellota Text';
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
   margin: 20px 0;
   -webkit-transition: all 0.3s ease 0s;
@@ -989,7 +1181,7 @@ html {
 
 .block9__content__block__text {
   font-family: 'Bellota Text';
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
   font-size: 14px;
   color: #8E030C;
@@ -1049,7 +1241,7 @@ html {
 .block9__content__block__links p {
   margin: 8px 0;
   font-family: 'Bellota Text';
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
 }
 
@@ -1057,7 +1249,7 @@ html {
   background: #DEC7B5;
   color: #8A030C;
   font-family: 'Bellota Text';
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
   font-size: 16px;
   padding: 0 2px;
@@ -1145,6 +1337,7 @@ html {
 
 .animals__content__symbols__block__icon img {
   max-width: 50%;
+  cursor: pointer;
 }
 
 .animals__content__symbols__block__icon:last-child {
@@ -1172,7 +1365,7 @@ html {
 .animals__content__symbols__block__description__text {
   text-align: start;
   font-family: 'Bellota Text';
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
   line-height: 18px;
 }
@@ -1182,8 +1375,12 @@ html {
   color: #ffffff;
   padding: 15px 20px;
   font-family: 'Bellota Text';
-  font-weight: 700;
+  font-weight: 900;
   font-style: normal;
   font-size: 16px;
   margin-top: 30px;
+}
+
+.hide {
+  display: none;
 }
