@@ -10,9 +10,6 @@
 </head>
     <body>
         <div class="wrapper">
-            
-
-
             <form action="" method="POST">
                 <div class="popup" id="popup-phone">
                     <div class="popup__body">
@@ -54,18 +51,28 @@
             </form>
 
              <!--Хедер-->
+             <div class="header__nav__navigate mobile">
+                <div class="menu__burger mobile">
+                        <span  ></span>
+                </div>
+                    <a href="#popup-phone" class="popup-link"><button class="header__nav__phone">Заказать звонок</button></a>
+            </div>
              <header class="header">
+               
                <div class="container">
                     <!--Навигационная панель-->
+                
                 <nav class="header__nav">
+                    
                     <ul class="header__nav__block">
                         <li class="header__nav__block__item"><a href="#about">О МАРАФОНЕ</a></li>
                         <li class="header__nav__block__item"><a href="#why">ПОЧЕМУ ОНЛАЙН?</a></li>
                         <li class="header__nav__block__item"><a href="#schedule">РАСПИСАНИЕ</a></li>
                         <li class="header__nav__block__item"><a href="#needs">ЧТО НУЖНО? </a></li>
-                        <li class="header__nav__block__item"><a href="#">+7 (499) 380-80-99</a></li>
-                        <li class="header__nav__block__item"><a href="#popup-phone" class="popup-link"><button>ЗАКАЗАТЬ ЗВОНОК</button><span></span></a></li>
+                        <li class="header__nav__block__item phone"><a href="#">+7 (499) 380-80-99</a></li>
+                        <li class="header__nav__block__item phone"><a href="#popup-phone" class="popup-link"><button>ЗАКАЗАТЬ ЗВОНОК</button><span></span></a></li>
                     </ul>
+                    
                 </nav>
                 <!--Тело хедера-->
                 <div class="header__body">
@@ -104,7 +111,7 @@
                                 <div class="about__block">
                                     <p>
                                         Астропрогноз - это больше не однодневное событие,
-                                       <span> а 5-дневный онлайн-марафон.</span> 
+                                       <span>а&nbsp5-дневный онлайн-марафон.</span> 
                                     </p>
                                     <p>
                                         Еще глубже, еще объемнее, еще удивительнее.
@@ -199,7 +206,7 @@
 
 
                 <!--4 Блок с расписанием-->
-                    <div class="schedule" id="schedule">
+                    <div class="schedule " id="schedule">
                       <div class="container">
                         <div class="schedule__bigblock">
                             <div class="schedule__block">
@@ -263,10 +270,13 @@
                                 </p>
                             </div>
                             <div class="quote__content__block">
-                                <p class="quote__content__block__price-old">4400</p>
-                                <p class="quote__content__block__price-new"><span class="price-style">440 руб.</span></p>
-                                <a href="#popup-reg" class="popup-link"><button class="quote__content__block__button">ЗАКАЗАТЬ ЗВОНОК</button></a>
-                                <span class="button-span"></span>
+                                <div class="quote__content__block__price">
+                                    <p class="quote__content__block__price-old">4400</p>
+                                    <p class="quote__content__block__price-new"><span class="price-style">440 руб.</span></p>
+                                </div>
+                                <div class="quote__content__block__buttonBox">
+                                    <a href="#popup-reg" class="popup-link"><button class="quote__content__block__button">ЗАКАЗАТЬ ЗВОНОК</button></a>
+                                    <span class="button-span"></span></div>
                             </div>
                         </div>
                     </div>
@@ -348,7 +358,7 @@
                                     следует ехать в путешествие? Об этом вы узнаете
                                     на Астропрогнозе.
                                 </p>
-                               <a href="#popup-reg" class="popup-link"> <button class="block6__content__block__button">УЗНАТЬ СВОЙ ГОРОСКОП</button></a>
+                               <a href="#popup-reg" class="popup-link"> <button class="block6__content__block__button web">УЗНАТЬ СВОЙ ГОРОСКОП</button></a>
                             </div>
                             <div class="block6__content__block">
                                 <p class="block6__content__block__question">Кто сможет заработать?</p>
@@ -371,6 +381,7 @@
                                     поговорим на Астропрогнозе.
                                 </p>
                             </div>
+                            <a href="#popup-reg" class="popup-link"> <button class="block6__content__block__button mobile">УЗНАТЬ СВОЙ ГОРОСКОП</button></a>
                         </div>
                     </div>
                 </div>
@@ -415,7 +426,7 @@
                                     </p>
                                 </div>
                                 <div class="cash__content__block">
-                                    <p class="cash__content__block__price-old">4400</p>
+                                    <p class="cash__content__block__price-old web">4400</p>
                                     <p class="cash__content__block__price-new"><span>440 руб.</span></p>
                                     <a href="#" class="cash__content__block__link">Простые условия возврата</a>
                                 </div>
@@ -507,13 +518,18 @@
                         </div>
                         
                         <div class="block9__content__block__links">
-                            <p><a href="#">Политика конфиденциальности </a></p>
-                            <p><a href="#">Договор оферты</a></p>
-                            <p><a href="#">onikolaeva.com</a></p>
+                            <div class="block9__content__block__link__item">
+                                <p><a href="#">Политика конфиденциальности </a></p>
+                                <p><a href="#">Договор оферты</a></p>
+                                <p><a href="#">onikolaeva.com</a></p>
+                            </div>
+                            <div class="block9__content__block__link__item">
+                                <p class="block9__content__block__INN">ИП Гарькавый А.В. ИНН 774331633703</p>
+                            </div>
                         </div>
     
                     </div>
-                    <div class="block9__content__block">
+                    <div class="block9__content__block web">
                         <p class="block9__content__block__INN">ИП Гарькавый А.В. ИНН 774331633703</p>
                     </div>
                 </div>
@@ -524,7 +540,7 @@
 
         
         <!--Блок с символами года-->
-        <div class="animals">
+        <div class="animals web">
             <div class="container">
                 <div class="animals__content">
                     <h2 class="animals__content__header">ЧТО НАС <span> ЖДЕТ В 2021?</span></h2>
@@ -804,12 +820,6 @@
             </div>
         </div>
         <!--Конец блока-->
-
-
-
-
-
-
 
         <!--Подключение скриптов-->
         <script type="text/javascript" src="js/jquery.js"></script>

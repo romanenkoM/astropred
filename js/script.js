@@ -15,9 +15,18 @@ $(document).ready(function(){
         };
     });
 
-    function get_id(element){
-        $(element).attr('id')
-    };
+
+    $(".menu__burger").on('click', function(){
+        $('.header__nav__block, .menu__burger').toggleClass('active');
+        $('body').toggleClass('lock');
+    })
+
+    $('.header__nav__block__item').on("click", function(){
+        if($('.header__nav__block, .menu__burger').hasClass('active')){
+            $('.header__nav__block, .menu__burger').removeClass('active')
+            $('body').removeClass('lock')
+        }
+    })
 
 
     //Настройка символов года
